@@ -13,69 +13,176 @@
     .meta { color: #8a7f6a; font-size: 13px; font-family: ui-monospace, monospace; letter-spacing: .06em; text-transform: uppercase; }
     a { color: #d9492b; }
     ul { padding-left: 22px; }
+    hr { border: none; border-top: 1px solid #3a3226; margin: 56px 0 8px; }
   </style>
 </head>
 <body>
   <h1>Política de privacidad</h1>
-  <p class="meta">Tinta Manga · Última actualización: 6 de julio de 2026</p>
+  <p class="meta">Tinta Manga · Última actualización: 1 de octubre de 2026</p>
 
   <h2>Resumen</h2>
-  <p><strong>Tinta Manga funciona sin cuenta y, en ese caso, no recolecta ningún dato
-     personal.</strong> No muestra anuncios ni incluye analíticas ni SDKs de rastreo.
-     Si decides crear una cuenta (opcional), se recogen los datos mínimos descritos abajo.</p>
+  <p>Sin cuenta, no guardamos tu actividad de lectura en la nube. La app muestra
+     anuncios de Google AdMob (Premium los quita), usa Firebase Crashlytics para
+     detectar fallos técnicos y Google Analytics para Firebase para medir, de forma
+     agregada, cómo se usa la oferta de Premium. <strong>Nunca enviamos tu historial
+     de lectura ni los títulos que lees.</strong></p>
+
+  <h2>Datos en tu dispositivo</h2>
+  <p>Tu actividad de lectura (series, progreso, leídos, historial, descargas y ajustes)
+     se guarda en el almacenamiento privado de la app y se borra al desinstalarla.
+     Puedes exportarla e importarla desde Perfil.</p>
 
   <h2>Cuenta opcional</h2>
-  <p>Puedes crear una cuenta con tu correo y una contraseña para sincronizar tu
-     actividad de lectura entre dispositivos. En ese caso se almacenan:</p>
-  <ul>
-    <li><strong>Correo electrónico y nombre</strong> (para identificarte) y tu contraseña
-        cifrada con hash — nunca en texto plano.</li>
-    <li><strong>Tu actividad de lectura</strong> (series seguidas, progreso, capítulos
-        leídos e historial), asociada a tu cuenta.</li>
-  </ul>
-  <p>Estos datos viajan cifrados (HTTPS), se usan exclusivamente para la
-     sincronización, no se comparten con nadie y no se usan con fines publicitarios.
-     Puedes <strong>eliminar tus datos y tu cuenta desde la propia app</strong>
-     (Perfil → Eliminar cuenta) o solicitarlo por correo.</p>
+  <p>Si creas una cuenta se almacenan tu correo y nombre (para identificarte), tu
+     contraseña cifrada con hash (nunca en texto plano) y tu actividad de lectura
+     asociada a la cuenta, con el único fin de sincronizar entre dispositivos. Viaja
+     siempre cifrada (HTTPS) y no se comparte con nadie ni se usa para publicidad.</p>
 
-  <h2>Datos que se guardan en tu dispositivo</h2>
-  <p>Tu actividad de lectura (series seguidas, progreso de lectura, capítulos marcados
-     como leídos y preferencias de la app) se guarda <strong>únicamente en tu dispositivo</strong>,
-     usando el almacenamiento local de la aplicación. Estos datos:</p>
-  <ul>
-    <li>Nunca salen de tu dispositivo ni se envían a ningún servidor nuestro (no tenemos servidores).</li>
-    <li>Se eliminan por completo al desinstalar la aplicación.</li>
-  </ul>
+  <h2>Eliminación</h2>
+  <p>Desde <strong>Perfil → Eliminar cuenta</strong> borras tus datos de la nube al
+     instante. También puedes solicitarlo por correo.</p>
 
   <h2>Conexiones de red</h2>
-  <p>Para mostrar el contenido, la app realiza peticiones directamente desde tu dispositivo
-     a fuentes públicas de terceros. Esas peticiones están sujetas a las políticas de
-     privacidad de cada fuente, como ocurre al visitar cualquier sitio web. La app no
-     añade identificadores personales a esas peticiones.</p>
+  <p>Para mostrar contenido, la app se conecta directamente a fuentes públicas de
+     terceros, sujetas a sus propias políticas, como al visitar cualquier sitio web.
+     No añadimos identificadores personales a esas peticiones.</p>
 
-  <h2>Contenido de terceros</h2>
-  <p>Tinta Manga es un lector/agregador: no aloja, sube ni distribuye contenido. Todo el
-     contenido pertenece a sus respectivos autores y editoriales. Si eres titular de
-     derechos y deseas reportar un problema, escríbenos.</p>
+  <h2>Publicidad</h2>
+  <p>La app muestra anuncios de Google AdMob (Google). Para mostrarlos y medirlos, AdMob
+     recibe el ID de publicidad del dispositivo, la dirección IP, información del
+     dispositivo (como modelo, sistema operativo e idioma), tus interacciones con los
+     anuncios (impresiones y toques) y tu elección en el mensaje de consentimiento.
+     <strong>Los usuarios Premium no ven anuncios.</strong></p>
+  <p>En la Unión Europea, el EEE, el Reino Unido y Suiza, los anuncios solo se
+     personalizan si lo aceptas en el mensaje de privacidad que aparece al abrir la app;
+     si no, no se personalizan. Fuera de esas regiones, Google puede personalizarlos
+     según la configuración de anuncios de tu dispositivo.</p>
+  <p>Puedes cambiar tu consentimiento en <strong>Perfil › Privacidad de anuncios</strong>,
+     y restablecer o eliminar tu ID de publicidad en los ajustes de Android
+     (<strong>Ajustes › Google › Anuncios</strong>, o <strong>Ajustes › Privacidad ›
+     Anuncios</strong> según el equipo). Google trata estos datos según su
+     <a href="https://policies.google.com/privacy">política de privacidad</a>; más
+     detalles en <a href="https://policies.google.com/technologies/partner-sites">Cómo
+     usa Google la información de sitios o aplicaciones que usan sus servicios</a>.</p>
+
+  <h2>Diagnóstico de fallos</h2>
+  <p>Firebase Crashlytics (Google) recibe información técnica cuando la app falla, como
+     versión de la app, modelo y sistema operativo, estado técnico, identificador de
+     instalación y traza del error. No adjuntamos correo, nombre ni historial de
+     lectura. Se usa únicamente para corregir estabilidad.</p>
+
+  <h2>Medición de uso</h2>
+  <p>Google Analytics para Firebase (Google) recibe eventos de uso de la app: apertura
+     de la pantalla de Premium, desde qué pantalla se abrió, si se inició, completó o
+     canceló una compra y el plan elegido, además de datos técnicos como versión de la
+     app, modelo, sistema operativo, país aproximado e identificador de instalación de
+     Firebase. No incluye tu correo, nombre, historial de lectura ni los títulos que
+     lees, y no se usa para publicidad.</p>
+  <p>En la Unión Europea, el EEE, el Reino Unido y Suiza solo se mide si lo aceptas en
+     el mensaje de privacidad que aparece al abrir la app; puedes cambiar tu elección en
+     <strong>Perfil › Privacidad de anuncios</strong>.</p>
+
+  <h2>Compras y suscripciones</h2>
+  <p>Los pagos de Premium los procesa Google Play con tu cuenta de Google: la app nunca
+     ve los datos de tu tarjeta. Solo recibe la confirmación de la compra para activar
+     Premium. Puedes cancelar la suscripción en <strong>Google Play › Pagos y
+     suscripciones</strong>.</p>
 
   <h2>Menores</h2>
-  <p>La app está clasificada para mayores de 16 años y no recolecta datos de ningún
-     usuario, incluidos menores de edad.</p>
+  <p>La app está clasificada para mayores de 16 años. El contenido +18 exige cuenta y
+     declaración de mayoría de edad.</p>
 
   <h2>Cambios en esta política</h2>
-  <p>Si esta política cambia, se actualizará esta página y la fecha de encabezado.</p>
+  <p>Si esta política cambia, publicaremos la nueva versión aquí y lo avisaremos
+     actualizando la fecha de «Última actualización».</p>
 
   <h2>Contacto</h2>
-  <p>Para cualquier consulta sobre privacidad o contenido:
-     <a href="mailto:f.agapia1962@gmail.com">f.agapia1962@gmail.com</a></p>
+  <p><a href="mailto:f.agapia1962@gmail.com">f.agapia1962@gmail.com</a></p>
 
-  <h2>English summary</h2>
-  <p>Tinta Manga works without an account and collects no personal data in that mode.
-     No ads, no analytics. If you optionally create an account (email + hashed password),
-     your reading activity (follows, progress, read chapters, history) is synced over
-     HTTPS solely for cross-device sync, never shared or used for advertising, and you
-     can delete your cloud data and account from within the app (Profile → Delete
-     account) or by email. Contact:
-     <a href="mailto:f.agapia1962@gmail.com">f.agapia1962@gmail.com</a>.</p>
+  <hr>
+
+  <section lang="en">
+    <h1>Privacy policy</h1>
+    <p class="meta">Tinta Manga · Last updated: October 1, 2026</p>
+
+    <h2>Summary</h2>
+    <p>Without an account, we do not store your reading activity in the cloud. The app
+       shows Google AdMob ads (removed with Premium), uses Firebase Crashlytics to detect
+       technical failures and Google Analytics for Firebase to measure, in aggregate, how
+       the Premium offer is used. <strong>We never send your reading history or the
+       titles you read.</strong></p>
+
+    <h2>Data on your device</h2>
+    <p>Your reading activity (series, progress, read, history, downloads and settings) is
+       stored in the app’s private storage and deleted on uninstall. You can export and
+       import it from Profile.</p>
+
+    <h2>Optional account</h2>
+    <p>If you create an account we store your email and name (to identify you), your
+       hashed password (never in plain text) and your reading activity linked to the
+       account, only to sync across devices. It always travels encrypted (HTTPS) and is
+       never shared or used for ads.</p>
+
+    <h2>Deletion</h2>
+    <p>From <strong>Profile → Delete account</strong> you erase your cloud data
+       instantly. You can also request it by email.</p>
+
+    <h2>Network connections</h2>
+    <p>To show content, the app connects directly to public third-party sources, subject
+       to their own policies, like visiting any website. We do not add personal
+       identifiers to those requests.</p>
+
+    <h2>Advertising</h2>
+    <p>The app shows Google AdMob ads (Google). To show and measure them, AdMob receives
+       the device advertising ID, IP address, device information (such as model,
+       operating system and language), your interactions with ads (impressions and taps)
+       and your choice in the consent message. <strong>Premium users do not see
+       ads.</strong></p>
+    <p>In the European Union, the EEA, the United Kingdom and Switzerland, ads are only
+       personalized if you accept it in the privacy message shown when you open the app;
+       otherwise they are not personalized. Outside those regions, Google may personalize
+       them according to your device’s ad settings.</p>
+    <p>You can change your consent in <strong>Profile › Ad privacy</strong>, and reset or
+       delete your advertising ID in Android settings (<strong>Settings › Google ›
+       Ads</strong>, or <strong>Settings › Privacy › Ads</strong> depending on the device).
+       Google processes this data under its
+       <a href="https://policies.google.com/privacy">privacy policy</a>; see also
+       <a href="https://policies.google.com/technologies/partner-sites">How Google uses
+       information from sites or apps that use our services</a>.</p>
+
+    <h2>Crash diagnostics</h2>
+    <p>Firebase Crashlytics (Google) receives technical information when the app fails,
+       such as app version, device model and operating system, technical state,
+       installation identifier and error stack trace. We do not attach your email, name
+       or reading history. It is used only to improve stability.</p>
+
+    <h2>Usage measurement</h2>
+    <p>Google Analytics for Firebase (Google) receives app usage events: opening the
+       Premium screen, which screen it was opened from, whether a purchase was started,
+       completed or cancelled and the chosen plan, plus technical data such as app
+       version, device model, operating system, approximate country and Firebase
+       installation identifier. It does not include your email, name, reading history or
+       the titles you read, and it is not used for advertising.</p>
+    <p>In the European Union, the EEA, the United Kingdom and Switzerland it is only
+       measured if you accept it in the privacy message shown when you open the app; you
+       can change your choice in <strong>Profile › Ad privacy</strong>.</p>
+
+    <h2>Purchases and subscriptions</h2>
+    <p>Premium payments are processed by Google Play with your Google account: the app
+       never sees your card details. It only receives the purchase confirmation to
+       activate Premium. You can cancel the subscription in <strong>Google Play ›
+       Payments &amp; subscriptions</strong>.</p>
+
+    <h2>Minors</h2>
+    <p>The app is rated 16+. +18 content requires an account and a declaration of legal
+       age.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, we will publish the new version here and signal it by
+       updating the “Last updated” date.</p>
+
+    <h2>Contact</h2>
+    <p><a href="mailto:f.agapia1962@gmail.com">f.agapia1962@gmail.com</a></p>
+  </section>
 </body>
 </html>
