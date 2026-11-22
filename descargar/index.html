@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tinta Manga</title>
+<meta name="description" content="Lector de manga, manhwa y manhua en español, portugués e inglés. En App Store y Google Play.">
+<meta name="theme-color" content="#14100b">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta property="og:title" content="Tinta Manga">
+<meta property="og:description" content="Cierra la app cuando quieras: sigues en la página donde quedaste.">
+<meta property="og:image" content="https://gabolunn.github.io/tinta-manga-web/descargar/icon.png">
+<link rel="icon" href="icon.png">
+<style>
+  @font-face { font-family: Mono; src: url(fragment-mono-400-latin.woff2) format('woff2'); font-display: swap; }
+  @font-face { font-family: Mincho; font-weight: 800; src: url(shippori-mincho-800-latin.woff2) format('woff2'); font-display: swap; }
+  @font-face { font-family: Kanji; font-weight: 800; src: url(shippori-mincho-800-kanji.woff2) format('woff2'); font-display: swap; }
+  @font-face { font-family: Zen; src: url(zen-kaku-gothic-new-400-latin.woff2) format('woff2'); font-display: swap; }
+  :root { color-scheme: dark; --bg: #14100b; --text: #f0e8d8; --muted: #a89d89; --line: #3a3128; --red: #df3a1a; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.5 Zen, system-ui, sans-serif; overflow-x: hidden; }
+  main { position: relative; isolation: isolate; max-width: 520px; min-height: 100svh; margin: auto; padding: 18px 24px calc(20px + env(safe-area-inset-bottom)); display: flex; flex-direction: column; }
+  .kanji { position: absolute; z-index: -1; right: -50px; top: 34px; font: 800 300px/1 Kanji, serif; color: rgba(223,58,26,.09); pointer-events: none; }
+  .langs { display: flex; justify-content: flex-end; gap: 2px; }
+  .langs button { min-width: 44px; min-height: 40px; border: 0; border-bottom: 1px solid transparent; background: none; color: var(--muted); font: 12px Mono, monospace; letter-spacing: .12em; cursor: pointer; }
+  .langs button[aria-pressed=true] { color: var(--text); border-color: var(--red); }
+  .brand { display: flex; align-items: center; gap: 14px; margin-top: 18px; }
+  .brand img { width: 64px; height: 64px; border-radius: 15px; }
+  .brand span { font: 13px Mono, monospace; letter-spacing: .18em; text-transform: uppercase; }
+  h1 { margin: 26px 0 12px; font: 800 clamp(34px, 10vw, 46px)/1.08 Mincho, Georgia, serif; text-wrap: balance; }
+  .lead { margin: 0; color: var(--muted); }
+  .stores { display: flex; flex-direction: column; gap: 10px; margin: 26px 0 8px; }
+  .store { display: flex; justify-content: space-between; align-items: center; min-height: 56px; padding: 0 18px; border: 1px solid var(--line); color: var(--text); text-decoration: none; font: 13px Mono, monospace; letter-spacing: .12em; text-transform: uppercase; }
+  .store b { font-weight: 400; }
+  .store.main { order: -1; background: var(--red); border-color: var(--red); color: #fff; }
+  .price { margin: 0; color: var(--muted); font-size: 13px; }
+  ul { list-style: none; padding: 0; margin: 24px 0; border-top: 1px solid var(--line); }
+  li { padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+  @media (max-width: 350px) { .store { padding: 0 14px; font-size: 12px; letter-spacing: .05em; } }
+  footer { margin-top: auto; color: var(--muted); font-size: 12px; }
+  footer p { margin: 0 0 8px; }
+  footer a { display: inline-block; padding: 8px 14px 8px 0; color: var(--text); }
+</style>
+</head>
+<body>
+<main>
+  <div class="kanji" aria-hidden="true">墨</div>
+  <nav class="langs" aria-label="Idioma">
+    <button type="button" data-lang="es" aria-pressed="true">ES</button>
+    <button type="button" data-lang="pt" aria-pressed="false">PT</button>
+    <button type="button" data-lang="en" aria-pressed="false">EN</button>
+  </nav>
+  <div class="brand"><img src="icon.png" alt=""><span>Tinta Manga</span></div>
+  <h1 data-t="title">Un capítulo más. Y mañana, donde quedaste.</h1>
+  <p class="lead" data-t="lead">Lector de manga, manhwa y manhua en español.</p>
+  <div class="stores">
+    <a class="store main" id="ios" href="https://apps.apple.com/app/id6820818664"><b data-t="ios">Descargar en App Store</b><span aria-hidden="true">›</span></a>
+    <a class="store" id="android" href="https://play.google.com/store/apps/details?id=com.tintamanga.app"><b data-t="android">Descargar en Google Play</b><span aria-hidden="true">›</span></a>
+  </div>
+  <p class="price" data-t="price">Descarga gratis. Tiene anuncios y Premium opcional.</p>
+  <ul>
+    <li data-t="f1">Recuerda el capítulo y la página donde quedaste.</li>
+    <li data-t="f2">Se lee en vertical o página a página.</li>
+    <li data-t="f3">Filtro cálido para leer de noche.</li>
+  </ul>
+  <footer>
+    <p data-t="source">La app no aloja el contenido: lo muestra desde fuentes de terceros. El catálogo cambia según el idioma y el dispositivo.</p>
+    <a id="privacy" data-t="privacy" href="https://gabolunn.github.io/tinta-manga-web/privacy.html">Privacidad</a>
+    <a id="terms" data-t="terms" href="https://gabolunn.github.io/tinta-manga-web/terminos.html">Términos</a>
+    <a id="removal" data-t="removal" href="https://gabolunn.github.io/tinta-manga-web/retiro-de-contenido.html">Retiro de contenido</a>
+  </footer>
+</main>
+<script>
+(() => {
+  const WEB = 'https://gabolunn.github.io/tinta-manga-web/'
+  const T = {
+    es: { title: 'Un capítulo más. Y mañana, donde quedaste.', lead: 'Lector de manga, manhwa y manhua en español.', ios: 'Descargar en App Store', android: 'Descargar en Google Play', price: 'Descarga gratis. Tiene anuncios y Premium opcional.', f1: 'Recuerda el capítulo y la página donde quedaste.', f2: 'Se lee en vertical o página a página.', f3: 'Filtro cálido para leer de noche.', source: 'La app no aloja el contenido: lo muestra desde fuentes de terceros. El catálogo cambia según el idioma y el dispositivo.', privacy: 'Privacidad', terms: 'Términos', removal: 'Retiro de contenido', pages: ['privacy.html', 'terminos.html'] },
+    pt: { title: 'Só mais um capítulo. E amanhã, de onde parou.', lead: 'Leitor de mangá, manhwa e manhua em português.', ios: 'Baixar na App Store', android: 'Baixar no Google Play', price: 'Download grátis. Tem anúncios e Premium opcional.', f1: 'Lembra o capítulo e a página em que você parou.', f2: 'Leia na vertical ou página por página.', f3: 'Filtro quente para ler à noite.', source: 'O app não hospeda o conteúdo: mostra conteúdo de fontes de terceiros. O catálogo muda conforme o idioma e o aparelho.', privacy: 'Privacidade', terms: 'Termos', removal: 'Remoção de conteúdo', pages: ['privacidade-pt.html', 'termos-pt.html'] },
+    en: { title: 'One more chapter. Tomorrow, right where you left off.', lead: 'A manga, manhwa and manhua reader in English.', ios: 'Download on the App Store', android: 'Get it on Google Play', price: 'Free to download. Has ads and optional Premium.', f1: 'Remembers the chapter and page where you stopped.', f2: 'Scroll down or turn the pages.', f3: 'A warm filter for night reading.', source: 'The app hosts no content: it displays content from third-party sources. The catalog varies by language and device.', privacy: 'Privacy', terms: 'Terms', removal: 'Content removal', pages: ['privacy-en.html', 'terms-en.html'] }
+  }
+  const query = new URLSearchParams(location.search)
+  // Solo letras, números y guiones: viaja a las tiendas como nombre de campaña.
+  const campaign = (query.get('c') || 'web').toLowerCase().replace(/[^a-z0-9-]/g, '').slice(0, 24) || 'web'
+  const wanted = [query.get('lang'), ...(navigator.languages || [navigator.language])]
+    .map((l) => String(l || '').slice(0, 2).toLowerCase()).find((l) => Object.hasOwn(T, l)) || 'es'
+
+  function show(lang) {
+    document.documentElement.lang = lang
+    document.querySelectorAll('[data-t]').forEach((el) => { el.textContent = T[lang][el.dataset.t] })
+    document.querySelectorAll('[data-lang]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)))
+    const name = `${campaign}-${lang}`
+    document.getElementById('ios').href = `https://apps.apple.com/app/id6820818664?${new URLSearchParams({ ct: name, mt: '8' })}`
+    document.getElementById('android').href = `https://play.google.com/store/apps/details?${new URLSearchParams({ id: 'com.tintamanga.app', hl: lang, referrer: `utm_source=${campaign.startsWith('meta') ? 'meta' : 'web'}&utm_medium=landing&utm_campaign=${name}` })}`
+    document.getElementById('privacy').href = WEB + T[lang].pages[0]
+    document.getElementById('terms').href = WEB + T[lang].pages[1]
+    document.getElementById('removal').href = `${WEB}retiro-de-contenido.html${lang === 'en' ? '#en' : ''}`
+  }
+
+  // El botón de la tienda de este teléfono va primero; el otro sigue visible.
+  const android = /Android/i.test(navigator.userAgent)
+  document.getElementById('ios').classList.toggle('main', !android)
+  document.getElementById('android').classList.toggle('main', android)
+  document.querySelectorAll('[data-lang]').forEach((b) => b.addEventListener('click', () => show(b.dataset.lang)))
+  show(wanted)
+})()
+</script>
+</body>
+</html>
