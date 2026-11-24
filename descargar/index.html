@@ -89,7 +89,8 @@
     document.querySelectorAll('[data-t]').forEach((el) => { el.textContent = T[lang][el.dataset.t] })
     document.querySelectorAll('[data-lang]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)))
     const name = `${campaign}-${lang}`
-    document.getElementById('ios').href = `https://apps.apple.com/app/id6820818664?${new URLSearchParams({ ct: name, mt: '8' })}`
+    // Sin ct/mt: sin el pt de App Store Connect no miden nada y el navegador de TikTok fallaba al abrir el enlace.
+    document.getElementById('ios').href = 'https://apps.apple.com/app/id6820818664'
     document.getElementById('android').href = `https://play.google.com/store/apps/details?${new URLSearchParams({ id: 'com.tintamanga.app', hl: lang, referrer: `utm_source=${campaign.startsWith('meta') ? 'meta' : 'web'}&utm_medium=landing&utm_campaign=${name}` })}`
     document.getElementById('privacy').href = WEB + T[lang].pages[0]
     document.getElementById('terms').href = WEB + T[lang].pages[1]
