@@ -91,6 +91,14 @@
   const ios = /iPhone|iPad|iPod/i.test(ua)
   const inApp = /musical_ly|Bytedance|TikTok|Instagram|FBAN|FBAV/i.test(ua)
   if (inApp) document.getElementById('inapp').hidden = false
+  // TikTok bloquea el TOQUE sobre un enlace a la App Store, pero no la navegación por código
+  // (por eso «mantener presionado › Abrir enlace» sí funcionaba). Dentro de esos navegadores
+  // el botón navega con location en vez de como enlace.
+  if (inApp && ios) document.getElementById('ios').addEventListener('click', (e) => {
+    e.preventDefault()
+    const url = e.currentTarget.href
+    setTimeout(() => { window.location.href = url }, 0)
+  })
 
   function show(lang) {
     document.documentElement.lang = lang
@@ -99,7 +107,7 @@
     const name = `${campaign}-${lang}`
     // Sin ct/mt: sin el pt de App Store Connect no miden nada y el navegador de TikTok fallaba al abrir el enlace.
     // Dentro de TikTok/Instagram/Facebook el navegador interno no abre apps.apple.com: se usa el esquema de la App Store.
-    document.getElementById('ios').href = (inApp && ios) ? 'itms-apps://apps.apple.com/app/id6820818664' : 'https://apps.apple.com/app/id6820818664'
+    document.getElementById('ios').href = 'https://apps.apple.com/app/id6820818664'
     document.getElementById('android').href = `https://play.google.com/store/apps/details?${new URLSearchParams({ id: 'com.tintamanga.app', hl: lang, referrer: `utm_source=${campaign.startsWith('meta') ? 'meta' : 'web'}&utm_medium=landing&utm_campaign=${name}` })}`
     document.getElementById('privacy').href = WEB + T[lang].pages[0]
     document.getElementById('terms').href = WEB + T[lang].pages[1]
